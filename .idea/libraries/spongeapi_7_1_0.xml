@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="spongeapi-7.1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../Документы/MinecraftServer/serversJars/spongeapi-7.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../Документы/MinecraftServer/serversJars/spongeapi-7.1.0-20180516.200342-25-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Документы/MinecraftServer/serversJars/spongeapi-7.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
