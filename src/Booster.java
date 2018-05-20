@@ -41,12 +41,10 @@ public class Booster
     {
         return logger;
     }
-
     @Listener
     public void onStart(GameStartingServerEvent e)
     {
         Task task = Task.builder()
-                .async()
                 .delayTicks(1)
                 .intervalTicks(1)
                 .name("Test scheduler")
@@ -101,15 +99,16 @@ public class Booster
                                 .stay(40)
                                 .fadeOut(15)
                                 .build());
+                        p.playSound(SoundTypes.BLOCK_ANVIL_USE, p.getPosition(),0.5);
                     }
                     ParticleManager.red(p);
                 } else {
                     playersWithParticle.put(p.getName(), playersWithParticle.get(p.getName()) + 1);
-                    p.playSound(SoundTypes.ENTITY_PARROT_IMITATE_CREEPER, p.getPosition(),0.5);
                     ParticleManager.black(p);
                 }
             } else {
                 playersWithParticle.put(p.getName(), 1);
+                p.playSound(SoundTypes.ENTITY_TNT_PRIMED, p.getPosition(),0.5);
                 ParticleManager.black(p);
             }
         } else {
@@ -121,6 +120,9 @@ public class Booster
             } else if(playersWithParticle.containsKey(p.getName()))
             {
                 playersWithParticle.remove(p.getName());
+                p.stopSounds();
+            } else {
+                p.stopSounds();
             }
         }
     }
